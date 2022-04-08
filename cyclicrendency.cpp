@@ -7,7 +7,8 @@ string xorem(string input,string key){
         for(int j=0;j<key_len;j++){
             input[i+j]=input[i+j]==key[j]?'0':'1';
         } 
-        for(;i<n&&input[i]!='1';i++); 
+        for(;i<n&&input[i]!='1';i++);  
+        if(input[i]=='1')
         i--;
     } 
     return input.substr(n-key_len+1);

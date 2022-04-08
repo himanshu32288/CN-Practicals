@@ -74,8 +74,6 @@ cout << "Enter IPV4 adress: ";
 cin >> ip;
 string cla_ss = findclass(ip);
 cout << "Class: " << cla_ss;
-// if (cla_ss != "A" || cla_ss != "B" || cla_ss != "C")
-// exit(0);
 cout << "\nDefault mask=" << mask[cla_ss] << "\n";
 find__id_host(ip, cla_ss);
 }
