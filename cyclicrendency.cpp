@@ -7,7 +7,8 @@ string xorem(string input,string key){
         for(int j=0;j<key_len;j++){
             input[i+j]=input[i+j]==key[j]?'0':'1';
         } 
-        for(;i<n&&input[i]!='1';i++);
+        for(;i<n&&input[i]!='1';i++); 
+        i--;
     } 
     return input.substr(n-key_len+1);
 }
@@ -30,10 +31,7 @@ int main(){
   cout<<"Enter data recieved:";
   string msg;
   cin>>msg;  
-  if(msg.length()!=data.length()){
-      cout<<"Error in communication";
-      return 0;
-  }
+
   string remainder;
   remainder=xorem(msg,gen);  
   for(auto x:remainder)
